@@ -46,7 +46,7 @@ that required you to edit, so to include them in your project:
 npm install --save axios mime-type tus-js-client @sinclair/typebox
 ```
 
-3. Using `StreamService` class just like the sample code in `src/index.ts`.
+3. Using `ByteArkStreamService` class just like the sample code in `src/index.ts`.
 
 ```ts
 const streamService = new ByteArkStreamService({
