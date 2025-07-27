@@ -47,3 +47,21 @@ npm install --save axios mime-type tus-js-client @sinclair/typebox
 ```
 
 3. Using `StreamService` class just like the sample code in `src/index.ts`.
+
+```ts
+const streamService = new ByteArkStreamService({
+  accessToken: "<BYTEARK_STREAM_ACCESS_TOKEN>",
+  defaultProjectKey: "<BYTEARK_STREAM_DEFAULT_PROJECT_KEY>",
+});
+
+const videoFilePath = "<YOUR_VIDEO_FILE_PATH>";
+const videoTitle = "<YOUR_VIDEO_TITLE>";
+
+console.log(`Uploading video from ${videoFilePath}`);
+const videoKey = await streamService.createAndUploadVideo({
+  localFilePath: videoFilePath,
+  title: videoTitle,
+});
+
+console.log(`Uploaded video key: ${videoKey}`);
+```
